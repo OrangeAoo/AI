@@ -3,13 +3,14 @@ Hi all! Welcome on board!!!!
 This is the second best place on the internet to learn PyTorch and Deep Learning (the first being the [PyTorch documentation](https://pytorch.org/tutorials)). 
 
 In this tutorial, we will cover:
->01 Neural Network Basics    
->02 PyTorch Basics 
->03 Workflow: Build NN with PyTorch
->04 Regression
->05 Classification 
->06 Computer Vision
->07 Mathematical Simulation: Numerical Solution For SDE/PDE
+
+>`01` Neural Network Basics    
+>`02` PyTorch Basics    
+>`03` Workflow: Build NN with PyTorch    
+>`04` Regression    
+>`05` Classification     
+>`06` Computer Vision    
+>`07` Mathematical Simulation: Numerical Solution For SDE/PDE    
 
 ---
 
@@ -19,7 +20,7 @@ What do you want out of your life?
 
 Well, this sounds kinda abstract and vague. Here, I wanna share a quote from _[Principles](https://www.principles.com/)_ by Ray Dalio, the founder of Bridgewater Associates (as well as my role model). At the very beginning of the book he wrote:
 
->_Think for yourself to decide: 1) what you want, 2) what is true, and 3) what you should do to achiee #1 in light of #2...and do that with humility and open-mindedness so that you consider the best thinking availabel to you._
+>_Think for yourself to decide: 1) what you want, 2) what is true, and 3) what you should do to achiee \\#1 in light of \\#2...and do that with humility and open-mindedness so that you consider the best thinking availabel to you._
 
 ![river to the future](https://github.com/user-attachments/assets/2f392749-d48d-44e4-bccb-aef4258f2a7c)
 
