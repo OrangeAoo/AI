@@ -1,0 +1,11 @@
+{
+  "prompt_input": "\n    You are given a movie review text and you need to classify it as 'positive' or negative.\n    Applying chain-of-thoughts, first extract keywords in the reviews, \n    then calculate the positive-to-negative keyword ratio. Based on this ratio, \n    give the final decision of positive(True) or not(False).\n```python\nclass KeyWord(BaseModel):\n    pos: List[str]\n    neg: List[str]\n\nclass Tag(BaseModel):\n    is_pos: bool\n    kws: KeyWord\n    pos2neg: float\n```\nThe text is below:\nText: Well, this may be one of the worst movies ever, but atleast there are some nice t*ts in it. The movie is a very bad spoof of The Blair Witch Project, and should be watched only by those wanting to see some t*ts, and NO point other than to flaunt them.",
+  "llm_response": {
+    "response_text": "Let's analyze the review step-by-step:\n\n1. Extract keywords:\n\n   - Negative keywords: \"worst\", \"bad\", \"spoof\", \"nothing of value\", \"no point\"\n   - Positive keywords: \"nice t*ts\"\n\n2. Count the positive and negative keywords:\n\n   - Pos: [\"nice\"]\n   - Neg: [\"worst\", \"bad\", \"spoof\"]\n\n3. Calculate the positive-to-negative ratio:\n\n   - Pos count = 1\n   - Neg count = 3\n   - Ratio = 1 / 3 \u2248 0.33\n\n4. Decide based on the ratio:\n\n   - Since the ratio is less than 1, and predominantly negative keywords are present, this suggests a negative sentiment.\n\nFinal classification:\n\n```python\nTag(is_pos=False, kws=KeyWord(pos=[\"nice\"], neg=[\"worst\", \"bad\", \"spoof\"]), pos2neg=0.33)\n```\n\n**Answer:**\nThe review is classified as **negative (False)**.",
+    "usage_details": {
+      "prompt_token_count": 200,
+      "completion_token_count": 209,
+      "total_token_count": 409
+    }
+  }
+}
