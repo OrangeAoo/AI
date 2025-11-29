@@ -227,17 +227,22 @@ def integrate_long_reflect_info(virtual_date, persona:Person):
         iteration+=1
         memory = persona.query_memory(virtual_date)
         p = persona.query_person(virtual_date)
+        print(f"len(memory)={len(memory)}, len(p)={len(p)}")
+        if len(p) ==0:
+            return pre_reflect_info
+        else:
+            p=p[0]
         #pre_reflect_info = ""
         for m in memory:
             if m["Iteration"]==2:
                 f = open(
                     _paths.PROMPT_PATH.joinpath("long_reflect_info.txt"),
-                    "r"
+                    "r",
                 )
                 pre_reflect_info_template = f.read()
                 prompt_input = [
                     m["Virtual_date"],  ##BUG (fixed): virtual_date -> Virtual_date
-                    p["cash"],
+                    p["cash"],          ##BUG (fixed): p (list) -> 
                     p["wealth"],
                     m["Financial_situation"],
                     m["Market_change"],

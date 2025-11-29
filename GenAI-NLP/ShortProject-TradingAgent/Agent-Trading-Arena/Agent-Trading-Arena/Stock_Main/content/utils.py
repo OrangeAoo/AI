@@ -1,6 +1,6 @@
 ## NOTE ===========
 ## Copy and paste your OpenAI API Key
-openai_api_key = None
+openai_api_key = ''
 key_owner = "Orange"
 ## ================ 
 
