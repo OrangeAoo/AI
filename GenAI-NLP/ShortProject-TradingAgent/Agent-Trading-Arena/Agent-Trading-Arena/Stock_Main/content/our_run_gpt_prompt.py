@@ -226,7 +226,14 @@ def integrate_long_reflect_info(virtual_date, persona:Person):
         virtual_date-=1
         iteration+=1
         memory = persona.query_memory(virtual_date)
-        p = persona.query_person(virtual_date)
+        person_state = persona.query_person(virtual_date)
+        # persona.query_person returns a list of dicts, but it only ever contains a
+        # single record per (person, virtual_date). Grab that record (if present)
+        # so we can safely reference the cash/wealth fields below.
+        # persona.query_memory returns a list of dicts as well, but every entry is
+        # already scoped to the same person, so we reuse the single person record
+        # for all memory rows on that date.
+        p = person_state[0] if person_state else {}
         #pre_reflect_info = ""
         for m in memory:
             if m["Iteration"]==2:
