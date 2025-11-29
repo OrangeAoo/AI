@@ -177,6 +177,13 @@ def GPT4_safe_generate_response(
 
     return False
 
+def GPT4_safe_generate_response():
+    pass
+
+
+def OpenRouter_generate_response():
+    pass
+
 
 def ChatGPT_safe_generate_response(
     prompt,
